@@ -1,0 +1,44 @@
+/* Titik henti responsif — pendekatan mobile-first. */
+
+@media (min-width: 640px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 760px) {
+  .site-nav {
+    display: flex;
+  }
+
+  .brand__product {
+    display: inline;
+  }
+
+  .site-footer__inner {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .site-footer__meta {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 980px) {
+  .hero {
+    padding-block: var(--space-section);
+  }
+
+  .hero__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: var(--space-3xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

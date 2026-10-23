@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <title>Contoh hasil: objek utama tanpa background, latar transparan</title>
+  <g id="subjek">
+    <path d="M366 262 L434 262 L434 318 Q400 336 366 318 Z" fill="#e9b98e" />
+    <circle cx="341" cy="220" r="10" fill="#f4cba6" />
+    <circle cx="459" cy="220" r="10" fill="#f4cba6" />
+    <ellipse cx="400" cy="216" rx="60" ry="64" fill="#f4cba6" />
+    <path d="M338 224 C328 140 366 106 400 106 C434 106 472 140 462 224 C454 186 448 164 400 164 C356 164 346 190 338 224 Z" fill="#22334f" />
+    <g fill="none" stroke="#122038" stroke-width="5" stroke-linecap="round">
+      <circle cx="377" cy="222" r="17" />
+      <circle cx="423" cy="222" r="17" />
+      <path d="M394 222 L406 222" />
+      <path d="M360 220 L344 224" />
+      <path d="M440 220 L456 224" />
+    </g>
+    <path d="M386 254 Q400 263 414 254" stroke="#c9906a" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    <path d="M400 314 C452 314 492 330 519 363 C545 395 552 436 552 476 L552 600 L248 600 L248 476 C248 436 255 395 281 363 C308 330 348 314 400 314 Z" fill="#3e8bff" />
+    <path d="M362 322 L438 322 L400 424 Z" fill="#e7eff9" />
+    <path d="M362 322 L400 424 L388 352 Z" fill="#2e6fd6" />
+    <path d="M438 322 L400 424 L412 352 Z" fill="#2e6fd6" />
+    <line x1="400" y1="424" x2="400" y2="600" stroke="#2e6fd6" stroke-width="5" />
+  </g>
+</svg>

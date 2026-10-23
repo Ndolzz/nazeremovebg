@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NAZE Background Remover — antarmuka untuk menghapus background gambar dan menghasilkan PNG transparan." />
+  <meta name="theme-color" content="#060D1A" />
+  <title>NAZE Background Remover — Hapus Background Gambar</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/preview.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#konten">Langsung ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#mulai" aria-label="NAZE Background Remover — kembali ke atas">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#0A1526" stroke="#1B2C46" />
+          <path d="M20 46 L20 18 L28 18 L36 32 L36 18 L44 18 L44 46 L36 46 L28 32 L28 46 Z" fill="#38D9E8" />
+          <circle cx="50" cy="15" r="4" fill="#3E8BFF" />
+        </svg>
+        <span class="brand__name">NAZE</span>
+        <span class="brand__divider" aria-hidden="true"></span>
+        <span class="brand__product">Background Remover</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a class="site-nav__link" href="#demonstrasi">Demonstrasi</a>
+        <a class="site-nav__link" href="#cara-kerja">Cara Kerja</a>
+      </nav>
+      <a class="btn btn--primary btn--sm" href="#mulai">Mulai</a>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="hero" id="mulai" aria-labelledby="hero-title">
+      <div class="hero__deco" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="status-badge">
+            <span class="status-badge__dot" aria-hidden="true"></span>
+            Fondasi antarmuka aktif — mesin penghapus background dalam tahap integrasi
+          </p>
+          <h1 class="hero__title" id="hero-title">Hapus <span class="hero__accent">background</span> dari gambar Anda, tanpa ribet.</h1>
+          <p class="hero__lede">
+            NAZE Background Remover dirancang untuk memisahkan objek utama dari latar belakang dan
+            menghasilkan PNG transparan. Unggah gambar untuk mencoba antarmuka; penghapusan otomatis
+            akan aktif setelah mesin selesai diintegrasikan.
+          </p>
+          <ul class="hero__points">
+            <li>
+              <svg class="hero__point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m5 12.5 4.5 4.5L19 7.5" />
+              </svg>
+              Antarmuka ringan, nyaman digunakan langsung dari ponsel
+            </li>
+            <li>
+              <svg class="hero__point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m5 12.5 4.5 4.5L19 7.5" />
+              </svg>
+              Hasil akhir berupa PNG dengan latar transparan
+            </li>
+            <li>
+              <svg class="hero__point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m5 12.5 4.5 4.5L19 7.5" />
+              </svg>
+              Pada tahap ini gambar hanya dipratinjau secara lokal
+            </li>
+          </ul>
+        </div>
+
+        <section class="upload-panel" data-upload aria-labelledby="upload-title">
+          <h2 class="upload-panel__title" id="upload-title">Unggah Gambar</h2>
+          <p class="upload-panel__hint">Format PNG, JPG, atau WebP — maksimum 15 MB.</p>
+
+          <label class="dropzone" for="gambar-input" data-dropzone>
+            <svg class="dropzone__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <circle cx="9" cy="10" r="1.6" />
+              <path d="m5 18 4.5-4.5 3 3L16 13l3 3" />
+            </svg>
+            <p class="dropzone__text">Seret dan letakkan gambar di sini</p>
+            <span class="dropzone__separator">atau</span>
+            <span class="btn btn--secondary btn--sm">Pilih Gambar</span>
+          </label>
+          <input class="visually-hidden" type="file" id="gambar-input" accept="image/png,image/jpeg,image/webp" data-upload-input />
+
+          <p class="upload-error" data-upload-error role="status" hidden></p>
+
+          <div class="upload-preview" data-upload-preview hidden>
+            <div class="upload-preview__frame">
+              <img class="upload-preview__image" data-upload-image alt="Pratinjau gambar yang dipilih" />
+            </div>
+            <dl class="upload-preview__meta">
+              <div>
+                <dt>Nama file</dt>
+                <dd data-upload-name>—</dd>
+              </div>
+              <div>
+                <dt>Ukuran</dt>
+                <dd data-upload-size>—</dd>
+              </div>
+            </dl>
+            <div class="upload-preview__actions">
+              <button type="button" class="btn btn--primary" data-process disabled aria-describedby="status-mesin">Proses Background</button>
+              <button type="button" class="btn btn--secondary" data-upload-replace>Ganti Gambar</button>
+              <button type="button" class="btn btn--ghost" data-upload-remove>Hapus</button>
+            </div>
+            <p class="upload-status" id="status-mesin">
+              Mesin penghapus background belum terintegrasi. Tombol proses akan aktif otomatis setelah integrasi selesai.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section" id="demonstrasi" aria-labelledby="demo-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Demonstrasi</p>
+          <h2 class="section-title" id="demo-title">Objek utama tetap, background hilang bersih.</h2>
+          <p class="section-lede">Geser pembatas untuk membandingkan kondisi sebelum dan sesudah penghapusan background.</p>
+        </header>
+
+        <figure class="compare" data-compare>
+          <div class="compare__frame" data-compare-frame style="--compare-pos: 50%;">
+            <div class="compare__layer compare__layer--after">
+              <img src="assets/images/contoh-sesudah.svg" alt="Contoh hasil: objek utama tanpa background" width="800" height="600" />
+            </div>
+            <div class="compare__layer compare__layer--before">
+              <img src="assets/images/contoh-sebelum.svg" alt="Contoh asli: objek utama dengan background" width="800" height="600" />
+            </div>
+            <div class="compare__divider" role="slider" tabindex="0" data-compare-divider
+                 aria-label="Pembatas perbandingan sebelum dan sesudah"
+                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal">
+              <span class="compare__handle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 7-5 5 5 5" />
+                  <path d="m15 7 5 5-5 5" />
+                </svg>
+              </span>
+            </div>
+            <span class="compare__tag compare__tag--before">Sebelum</span>
+            <span class="compare__tag compare__tag--after">Sesudah</span>
+          </div>
+          <figcaption class="compare__caption">
+            <span class="tag-demo">Contoh demonstrasi — bukan hasil mesin penghapus background</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="cara-kerja" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Cara Kerja</p>
+          <h2 class="section-title" id="steps-title">Empat langkah, dari gambar mentah ke PNG transparan.</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__index" aria-hidden="true">01</span>
+            <span class="step__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 16V4" />
+                <path d="m7 9 5-5 5 5" />
+                <path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" />
+              </svg>
+            </span>
+            <h3 class="step__title">Unggah gambar</h3>
+            <p class="step__text">Seret dan letakkan file, atau pilih PNG, JPG, dan WebP langsung dari galeri perangkat.</p>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">02</span>
+            <span class="step__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7Z" />
+                <path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8Z" />
+              </svg>
+            </span>
+            <h3 class="step__title">Proses background</h3>
+            <p class="step__text">Mesin penghapus background memisahkan objek utama dari latarnya secara otomatis.</p>
+            <span class="step__note">Segera</span>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">03</span>
+            <span class="step__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M12 3v18" />
+              </svg>
+            </span>
+            <h3 class="step__title">Periksa hasil</h3>
+            <p class="step__text">Gunakan slider perbandingan untuk menilai batas objek sebelum menyimpan.</p>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">04</span>
+            <span class="step__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4v12" />
+                <path d="m7 11 5 5 5-5" />
+                <path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" />
+              </svg>
+            </span>
+            <h3 class="step__title">Unduh PNG</h3>
+            <p class="step__text">Simpan hasil akhir sebagai PNG dengan latar transparan siap pakai.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand" href="#mulai" aria-label="NAZE Background Remover — kembali ke atas">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <rect width="64" height="64" rx="14" fill="#0A1526" stroke="#1B2C46" />
+            <path d="M20 46 L20 18 L28 18 L36 32 L36 18 L44 18 L44 46 L36 46 L28 32 L28 46 Z" fill="#38D9E8" />
+            <circle cx="50" cy="15" r="4" fill="#3E8BFF" />
+          </svg>
+          <span class="brand__name">NAZE</span>
+          <span class="brand__divider" aria-hidden="true"></span>
+          <span class="brand__product">Background Remover</span>
+        </a>
+        <p class="site-footer__desc">
+          Alat penghapus background gambar dengan identitas NAZE. Fondasi antarmuka telah selesai;
+          mesin penghapusan sedang disiapkan untuk integrasi.
+        </p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Tautan situs">
+        <a href="#demonstrasi">Demonstrasi</a>
+        <a href="#cara-kerja">Cara Kerja</a>
+        <a href="https://github.com/Ndolzz/nazeremovebg" target="_blank" rel="noopener noreferrer">Kode Sumber</a>
+      </nav>
+      <p class="site-footer__meta">© 2026 NAZE — Background Remover</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

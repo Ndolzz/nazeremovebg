@@ -1,0 +1,80 @@
+/*
+ * Design tokens — NAZE "Midnight Neon: Natural Edition".
+ * Satu-satunya tempat definisi warna, tipografi, spasi, dan gerak.
+ */
+
+:root {
+  /* Palet warna */
+  --color-bg: #060d1a;
+  --color-bg-elevated: #0a1526;
+  --color-surface: #0d1a2f;
+  --color-surface-raised: #102036;
+  --color-surface-hover: #142740;
+  --color-border: #1b2c46;
+  --color-border-strong: #2a4062;
+  --color-text: #e3edf9;
+  --color-text-secondary: #96a7c1;
+  --color-text-muted: #5e7291;
+  --color-accent: #38d9e8;
+  --color-accent-strong: #1fb9cf;
+  --color-accent-contrast: #04202a;
+  --color-accent-soft: rgba(56, 217, 232, 0.1);
+  --color-accent-line: rgba(56, 217, 232, 0.35);
+  --color-highlight: #3e8bff;
+  --color-highlight-soft: rgba(62, 139, 255, 0.14);
+  --color-danger: #ff6b7a;
+  --color-success: #4ade80;
+
+  /* Tipografi */
+  --font-ui: 'Inter', 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Manrope', 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  /* Skala ukuran teks (responsif) */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.8125rem, 0.79rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.91rem + 0.2vw, 1.0625rem);
+  --text-md: clamp(1.0625rem, 1.02rem + 0.25vw, 1.25rem);
+  --text-lg: clamp(1.25rem, 1.18rem + 0.4vw, 1.5625rem);
+  --text-xl: clamp(1.5625rem, 1.42rem + 0.7vw, 2.25rem);
+  --text-2xl: clamp(1.875rem, 1.6rem + 1.4vw, 3rem);
+  --text-3xl: clamp(2.25rem, 1.7rem + 2.6vw, 3.6rem);
+
+  /* Skala spasi */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-section: clamp(4rem, 9vw, 6.5rem);
+
+  /* Sudut lengkung */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* Bayangan */
+  --shadow-sm: 0 1px 2px rgba(2, 6, 18, 0.5);
+  --shadow-md: 0 8px 24px rgba(2, 6, 18, 0.45);
+  --shadow-lg: 0 16px 48px rgba(2, 6, 18, 0.55);
+  --shadow-accent: 0 4px 18px rgba(56, 217, 232, 0.22);
+
+  /* Gerak */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 450ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Tata letak */
+  --container-max: 72rem;
+  --header-height: 72px;
+
+  /* Lapisan */
+  --z-header: 100;
+  --z-compare-divider: 2;
+  --z-compare-tag: 3;
+}
